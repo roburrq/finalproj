@@ -1,11 +1,15 @@
 package personalproject.itcollege.MotivationalApp;
 import Practice2.TextIO;
+import sun.font.TrueTypeFont;
+import sun.invoke.empty.Empty;
 
+import javax.swing.*;
+import javax.swing.border.Border;
+import java.awt.*;
 import java.util.Random;
 
 public class Hello {
     public static void main (String [] args){
-
 
         String[] angrQuotesB18 = {
                 "Don't get mad, smile and creep them out instead",
@@ -67,22 +71,22 @@ public class Hello {
 
         //String choice = [select];
 
-        if (age <18 && feelings.equals("sad")){
+        if (age <18 && feelings.toUpperCase().equals("SAD")){
             System.out.println(ages[0][1][rand.nextInt(2)]);
         }
-        else if (age >= 18 && feelings.equals("sad") ) {
+        else if (age >= 18 && feelings.toUpperCase().equals("SAD") ) {
             System.out.println(ages[1][1][rand.nextInt(3)]);
         }
-        else if (age <18 && feelings.equals("Angry")){
+        else if (age <18 && feelings.toUpperCase().equals("ANGRY")){
             System.out.println(ages[0][0][rand.nextInt(2)]);
         }
-        else if (age >= 18 && feelings.equals("Angry")){
+        else if (age >= 18 && feelings.toUpperCase().equals("ANGRY")){
             System.out.println(ages [1][0][rand.nextInt(8)]);
         }
-        else if (age < 18  && feelings.equals("Happy")){
+        else if (age < 18  && feelings.toUpperCase().equals("HAPPY")){
             System.out.println(ages [0][2][rand.nextInt(2)]);
         }
-        else if (age >= 18 && feelings.equals("Happy")){
+        else if (age >= 18 && feelings.toUpperCase().equals("HAPPY")){
             System.out.println(ages [1][2] [rand.nextInt(4)]);
         }
         else{
