@@ -84,7 +84,7 @@ public class Hello {
         else if (age >= 18 && feelings.toUpperCase().equals("ANGRY")){
             System.out.println(ages [1][0][rand.nextInt(8)]);
         }
-        else if (age < 18  && feelings.equals("HAPPY")){
+        else if (age < 18  && feelings.toUpperCase().equals("HAPPY")){
             System.out.println(ages [0][2][rand.nextInt(2)]);
         }
         else if (age >= 18 && feelings.toUpperCase().equals("HAPPY")){
