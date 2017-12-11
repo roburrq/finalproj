@@ -40,7 +40,8 @@ public class Hello {
         String [] sQuotesA18 = {
                 "Whenever your feeling sad just remember there is an idiot pulling a door thats says 'push'",
                 "I don't hate you i just lost respect for you",
-                "If people show you that they don't care, show them that you are ok"
+                "If people show you that they don't care, show them that you are ok",
+                "blah, blah, blah, blah....go eat an ice cream"
 
         };
         String [] hQuotesA18 = {
@@ -83,7 +84,7 @@ public class Hello {
         else if (age >= 18 && feelings.toUpperCase().equals("ANGRY")){
             System.out.println(ages [1][0][rand.nextInt(8)]);
         }
-        else if (age < 18  && feelings.toUpperCase().equals("HAPPY")){
+        else if (age < 18  && feelings.equals("HAPPY")){
             System.out.println(ages [0][2][rand.nextInt(2)]);
         }
         else if (age >= 18 && feelings.toUpperCase().equals("HAPPY")){
