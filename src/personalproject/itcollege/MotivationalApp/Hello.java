@@ -77,7 +77,8 @@ public class Hello {
         System.out.println();
         System.out.println("How old are you? : ");
         int age = TextIO.getlnInt();  //Age is an integer, hence user can only enter a number.
-        System.out.println("How are you feeling today? ");
+        System.out.println("How are you feeling today? (Please use Angry, Happy or Sad)");
+
         String feelings = TextIO.getlnString();
 
         Random rand = new Random();   //creating a method 'rand'. This will be called to generate a random quotes base on user input.
@@ -89,24 +90,28 @@ public class Hello {
         //and converting the text to upper case which the loop will then recognize and return appropriate responses.
         if (age <18 && feelings.toUpperCase().equals("SAD")){
             System.out.println(ages[0][1][rand.nextInt(2)]);
-        }
-        else if (age >= 18 && feelings.toUpperCase().equals("SAD") ) {
+        } else if (age >= 18 && feelings.toUpperCase().equals("SAD") ) {
             System.out.println(ages[1][1][rand.nextInt(3)]);
-        }
-        else if (age <18 && feelings.toUpperCase().equals("ANGRY")){
+        } else if (age <18 && feelings.toUpperCase().equals("ANGRY")){
             System.out.println(ages[0][0][rand.nextInt(2)]);
-        }
-        else if (age >= 18 && feelings.toUpperCase().equals("ANGRY")){
+        } else if (age >= 18 && feelings.toUpperCase().equals("ANGRY")){
             System.out.println(ages [1][0][rand.nextInt(8)]);
-        }
-        else if (age < 18  && feelings.toUpperCase().equals("HAPPY")){
+        } else if (age < 18  && feelings.toUpperCase().equals("HAPPY")){
             System.out.println(ages [0][2][rand.nextInt(2)]);
-        }
-        else if (age >= 18 && feelings.toUpperCase().equals("HAPPY")){
+        } else if (age >= 18 && feelings.toUpperCase().equals("HAPPY")){
             System.out.println(ages [1][2] [rand.nextInt(4)]);
-        }
-        else{
+        } else{
             System.out.println("You have entered and unknown combination, please retry");
         }
+        System.out.println();
+        System.out.println("Do you want to go again?  Please answer with YES or NO");
+        String answer = TextIO.getlnString();
+        if(answer.toUpperCase ().equals("YES")){
+            String[] restart = new String[1];
+            main(restart);
+        }else{
+            System.out.println("Ok goodbye now");
+        }
+
 }
 }
