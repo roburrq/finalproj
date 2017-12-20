@@ -19,9 +19,9 @@ This app generates random quotes base on ones feeling and age.
 public class Hello {
     public static void main (String [] args){
 
-        phrases ph = new phrases();
+        phrases phrase = new phrases();
 
-        //user will be provided a greeting and instructed to enter their name, age and mood.
+         //user will be provided a greeting and instructed to enter their name, age and mood.
 
         System.out.println ("Welcome to the motivational centre. Please enter your name, age and how you are feeling to get your quote");
         System.out.println();
@@ -34,25 +34,27 @@ public class Hello {
         System.out.println("How are you feeling today? (Please use Angry, Happy or Sad)");
         String feelings = TextIO.getlnString();
 
-        Random rand = new Random();   //creating a object 'rand'. This will be called to generate a random quotes base on user input.
+            Random rand = new Random();   //creating a object 'rand'. This will be called to generate a random quotes base on user input.
 
-        //The if and else if loop is used to check user inputs from 'rand'. The 'toUpperCase* is used to accept user input in any random case
-        //and converting the text to upper case which the loop will then recognize and return appropriate responses.
-        if (age <18 && feelings.toUpperCase().equals("SAD")){
-            System.out.println(ph.sadQuotesB18[rand.nextInt(2)]);
-        } else if (age >= 18 && feelings.toUpperCase().equals("SAD") ) {
-            System.out.println(ph.sQuotesA18[rand.nextInt(3)]);
-        } else if (age <18 && feelings.toUpperCase().equals("ANGRY")){
-            System.out.println(ph.angrQuotesB18[rand.nextInt(2)]);
-        } else if (age >= 18 && feelings.toUpperCase().equals("ANGRY")){
-            System.out.println(ph.aQuotesA18[rand.nextInt(8)]);
-        } else if (age < 18  && feelings.toUpperCase().equals("HAPPY")){
-            System.out.println(ph.happyQuotesB18[rand.nextInt(2)]);
-        } else if (age >= 18 && feelings.toUpperCase().equals("HAPPY")){
-            System.out.println(ph.hQuotesA18[rand.nextInt(4)]);
-        } else{
-            System.out.println("You have entered and unknown combination, please retry");
+            //The if and else if loop is used to check user inputs from 'rand'. The 'toUpperCase* is used to accept user input in any random case
+            //and converting the text to upper case which the loop will then recognize and return appropriate responses.
+            if (age <18 && feelings.toUpperCase().equals("SAD")){
+                System.out.println(phrase.sadQuotesBefore18[rand.nextInt(2)]);
+            } else if (age >= 18 && feelings.toUpperCase().equals("SAD") ) {
+                System.out.println(phrase.sadQuotesAfter18[rand.nextInt(3)]);
+            } else if (age <18 && feelings.toUpperCase().equals("ANGRY")){
+                System.out.println(phrase.angryQuotesBefore18[rand.nextInt(2)]);
+            } else if (age >= 18 && feelings.toUpperCase().equals("ANGRY")){
+                System.out.println(phrase.angryQuotesAfter18[rand.nextInt(8)]);
+            } else if (age < 18  && feelings.toUpperCase().equals("HAPPY")){
+                System.out.println(phrase.happyQuotesBefore18[rand.nextInt(2)]);
+            } else if (age >= 18 && feelings.toUpperCase().equals("HAPPY")){
+                System.out.println(phrase.happyQuotesAfter18[rand.nextInt(4)]);
+            } else{
+                System.out.println("You have entered and unknown combination, please try again");
         }
+            //If the after user receives response then user will be asked if they wish to continue or not. user then has
+            //the options YES or NO. yes will restart the loop and NO will exit the programme.
         System.out.println();
         System.out.println("Do you want to go again?  Please answer with YES or NO");
         String answer = TextIO.getlnString();
